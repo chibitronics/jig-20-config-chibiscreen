@@ -1,0 +1,6 @@
+[Test]
+ExecStart=./02-upload-program.sh ltctest.wav
+Name=Program Final App
+Description=Program the final, shipping application (Larson)
+Requires=finish-ltc-tests
+Timeout=30
