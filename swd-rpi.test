@@ -7,6 +7,5 @@ Description=Run the OpenOCD debugger in the background.
 Timeout=1000
 DaemonReadyText=target halted due to debug-request
 Requires=mass-erase
-#Requires=mass-erase
 Provides=swd
 Type=daemon
