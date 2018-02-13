@@ -9,7 +9,6 @@ do
     
     if timeout 3 grep -q "Chibiscreen build 873000deb3bb06d64056db415f51ee53a24b6b76" ${uart}
     then
-	echo q > ${uart}
 	echo "Version OK"
 	exit 0
     fi
