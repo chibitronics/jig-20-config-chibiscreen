@@ -2,5 +2,5 @@
 ExecStart=/usr/bin/true
 Name=Run all tests
 Description=Make sure all tests complete successfully
-Requires=waitpass-test,status-leds
+Requires=waitpass-test
 Timeout=5
