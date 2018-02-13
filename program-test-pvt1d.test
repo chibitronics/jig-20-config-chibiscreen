@@ -1,6 +1,14 @@
 [Test]
-ExecStart=./program-test-pvt1d.sh
+ExecStart=/opt/openocd/bin/openocd \
+	-l /dev/fd/1 \
+	-f interface/raspberrypi2-native.cfg \
+	-c "transport select swd" \
+	-f target/kx.cfg \
+	-c 'init' \
+	-c 'reset halt' \
+	-c 'kinetis fcf_source write' \
+        -c 'program /disk/jig-20-config-chibiscreen/bin/chibiscreen-test-pvt1d.elf' \
+	-c shutdown
 Name=Program test OS for chibiscreen
 Description=Program the testing operating system
-Requires=swd
 Timeout=30
